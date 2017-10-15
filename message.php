@@ -8,7 +8,7 @@ $data = json_decode($file, true);
         //$country = $character['country'];
         if($character['country'] == $body) {
           $city = $character['city'];
-            $res = "Capital of $body is $city";
+          $res = $city;
         }  
         else
             $res = "Enter a valid country name";
