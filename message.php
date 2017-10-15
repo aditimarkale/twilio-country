@@ -14,8 +14,11 @@ header('Content-Type: text/xml');
 
 <Response>
     <Message>
-        
-        Capital of <?php echo $body ?> is <?php echo $city ?>
-        
+        <?php
+        if($body == $character['country']) {?>
+            Capital of <?php echo $body ?> is <?php echo $city ?>
+        <?php}
+        else
+            echo 'Enter valid country name. E.g: United States'; ?>  
     </Message>
 </Response>
