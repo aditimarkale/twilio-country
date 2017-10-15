@@ -14,7 +14,7 @@ header('Content-Type: text/xml');
 
 <Response>
     <Message>
-        Hello <?php echo $number ?>.
-        You said <?php echo $city ?>
+        Capital of <?php echo $body ?>.
+        is <?php echo $city ?>
     </Message>
 </Response>
