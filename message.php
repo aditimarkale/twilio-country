@@ -5,13 +5,8 @@ $url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country
 $file = file_get_contents($url);
 $data = json_decode($file, true);
     foreach ($data as $character) {  
-        //$country = $character['country'];
         if($character['country'] == $body) {
           $city = $character['city'];
-          $res = $city;
-        }  
-        else{
-            echo "Enter a valid country name";
         }
     }
 header('Content-Type: text/xml');
@@ -19,6 +14,6 @@ header('Content-Type: text/xml');
 
 <Response>
     <Message>
-            <?php echo $res ?>
+           Capital of <?php echo $body ?> is <?php echo $city ?>
     </Message>
 </Response>
