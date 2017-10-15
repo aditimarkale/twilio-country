@@ -10,8 +10,9 @@ $data = json_decode($file, true);
           $city = $character['city'];
           $res = $city;
         }  
-        else
+        else{
             $res = "Enter a valid country name";
+        }
     }
 header('Content-Type: text/xml');
 ?>
