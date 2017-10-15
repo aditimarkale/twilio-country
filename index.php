@@ -13,7 +13,7 @@
 $number = $_POST['From'];
 $body = $_POST['Body'];     
      
-$url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
+/*$url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
 $file = file_get_contents($url);
 $data = json_decode($file, true);
     foreach ($data as $character) {  
@@ -21,7 +21,7 @@ $data = json_decode($file, true);
           $city = $character['city'];
         }
     }
-
+*/
 
 header('Content-Type: text/xml');
 ?>
@@ -29,7 +29,7 @@ header('Content-Type: text/xml');
 <Response>
     <Message>
         Hello <?php echo $number ?>.
-        You said <?php echo $city ?>
+        You said <?php echo $body ?>
     </Message>
 </Response>
 ?>
