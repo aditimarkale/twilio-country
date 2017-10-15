@@ -1,13 +1,20 @@
 <?php
 $number = $_POST['From'];
 $body = $_POST['Body'];
-
+$url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
+$file = file_get_contents($url);
+$data = json_decode($file, true);
+    foreach ($data as $character) {  
+        if($character['country'] == $body) {
+          $city = $character['city'];
+        }
+    }
 header('Content-Type: text/xml');
 ?>
 
 <Response>
     <Message>
         Hello <?php echo $number ?>.
-        You said <?php echo $body ?>
+        You said <?php echo $city ?>
     </Message>
 </Response>
