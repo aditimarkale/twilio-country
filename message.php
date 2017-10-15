@@ -11,7 +11,7 @@ $data = json_decode($file, true);
           $res = $city;
         }  
         else{
-            $res = "Enter a valid country name";
+            echo "Enter a valid country name";
         }
     }
 header('Content-Type: text/xml');
