@@ -7,6 +7,10 @@ $data = json_decode($file, true);
     foreach ($data as $character) {  
         if($character['country'] == $body) {
           $city = $character['city'];
+            $response->message('Capital of '.$body.' is ' .$city );
+        }
+        else{
+            $response->message('Please enter a valid country name!');
         }
     }
 header('Content-Type: text/xml');
@@ -14,6 +18,6 @@ header('Content-Type: text/xml');
 
 <Response>
     <Message>
-           Capital of <?php echo $body ?> is <?php echo $city ?>
+           <?php echo $response ?>
     </Message>
 </Response>
