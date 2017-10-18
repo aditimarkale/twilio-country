@@ -8,10 +8,7 @@ $data = json_decode($file, true);
     foreach ($data as $character) {  
         if($character['country'] == $body) {
           $city = $character['city'];
-        }
-        else {
-            echo 'Please enter a valid country name!';
-        }
+        }        
     }
 header('Content-Type: text/xml');
 ?>
