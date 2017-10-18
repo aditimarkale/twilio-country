@@ -12,7 +12,6 @@ $data = json_decode($file, true);
         }        
         else {
           echo "Please enter valid country name";
-          break;
         }
     }
 header('Content-Type: text/xml');
