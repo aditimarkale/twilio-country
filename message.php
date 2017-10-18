@@ -15,13 +15,18 @@ $data = json_decode($file, true);
 </Response>
 ";
             break;
-        } 
-    }
-header('Content-Type: text/xml');
-?>
-
-<Response>
+        }
+        elseif ($character['country'] != $body) {
+          echo "<Response>
     <Message>
            Please enter valid country name
     </Message>
 </Response>
+";  
+        }
+        else
+        {
+        }
+    }
+header('Content-Type: text/xml');
+?>
