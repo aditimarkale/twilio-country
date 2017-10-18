@@ -7,7 +7,7 @@ $data = json_decode($file, true);
     foreach ($data as $character) {  
         if($character['country'] == $body) {
           $city = $character['city'];
-            $response->message('Capital of '.$body.' is ' .$city );
+            $response->message( $city );
         }
         else{
             $response->message('Please enter a valid country name!');
