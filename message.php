@@ -10,7 +10,7 @@ $data = json_decode($file, true);
           $city = $character['city'];        
             echo "<Response>
     <Message>
-           Capital of <?php echo $body ?> is <?php echo $city ?>
+           Capital of " . $body . " is " . $city . "
     </Message>
 </Response>
 ";
