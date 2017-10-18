@@ -27,9 +27,3 @@ $data = json_decode($file, true);
     }
 header('Content-Type: text/xml');
 ?>
-<!--
-<Response>
-    <Message>
-           Capital of <?php echo $body ?> is <?php echo $city ?>
-    </Message>
-</Response> -->
