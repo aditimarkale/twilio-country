@@ -14,6 +14,7 @@ $data = json_decode($file, true);
     </Message>
 </Response>
 ";
+            break;
         }  
         else {
             "<Response>
