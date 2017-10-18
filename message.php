@@ -7,14 +7,20 @@ $data = json_decode($file, true);
 
     foreach ($data as $character) {  
         if($character['country'] == $body) {
-          $city = $character['city'];
-        }        
-    }
-header('Content-Type: text/xml');
-?>
-
-<Response>
+          $city = $character['city'];        
+            echo "<Response>
     <Message>
            Capital of <?php echo $body ?> is <?php echo $city ?>
     </Message>
 </Response>
+";
+        }        
+    }
+header('Content-Type: text/xml');
+?>
+<!--
+<Response>
+    <Message>
+           Capital of <?php echo $body ?> is <?php echo $city ?>
+    </Message>
+</Response> -->
